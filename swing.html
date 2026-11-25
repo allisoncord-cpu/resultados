@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como eu opero swing</title>
+<meta name="description" content="As regras de swing trade que eu sigo na minha conta real, explicadas em 2 minutos.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{ --bg:#0b0b0b; --card:#151515; --ink:#f5f5f5; --ink-2:#a3a3a3; --line:#262626; --verde:#22c55e; --ruim:#ef4444; }
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){ --bg:#f6f6f4; --card:#fff; --ink:#111; --ink-2:#555; --line:#e5e5e5; --verde:#15803d; } }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;line-height:1.5}
+main{max-width:560px;margin:0 auto;padding:28px 16px 48px}
+.topo{text-align:center;margin-bottom:22px}
+.topo small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+h1{font-size:28px;font-weight:800;margin:8px 0 6px;line-height:1.15}
+h1 b{color:var(--verde)}
+.sub{color:var(--ink-2);font-size:15px;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin-bottom:12px}
+.n{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--verde);color:#000;font-weight:800;align-items:center;justify-content:center;margin-right:8px;font-size:15px}
+.card h2{display:flex;align-items:center;font-size:17px;margin:0 0 6px}
+.card p{margin:0;color:var(--ink-2);font-size:14.5px}
+.card p b{color:var(--ink)}
+.botao{display:block;text-align:center;background:var(--verde);color:#000;font-weight:800;text-decoration:none;border-radius:14px;padding:15px;margin:18px 0 10px;font-size:16px}
+.risco{border-color:color-mix(in srgb,var(--ruim) 45%,var(--line))}
+.risco h2{color:var(--ruim)}
+.rodape{font-size:12px;color:var(--ink-2);text-align:center;margin-top:20px}
+</style>
+</head>
+<body>
+<main>
+  <div class="topo">
+    <small>Allison · @legatusgroupfx</small>
+    <h1>Como eu opero <b>swing trade</b></h1>
+    <p class="sub">As regras que eu sigo na minha conta real. Leitura de 2 minutos.</p>
+  </div>
+
+  <div class="card"><h2><span class="n">1</span>Só moedas principais</h2>
+    <p>Opero <b>EUR/USD, GBP/USD, AUD/USD, NZD/USD, USD/CAD e USD/CHF</b>. São os pares com mais volume do mundo e spread menor. Fico fora do USD/JPY e não opero ouro.</p></div>
+
+  <div class="card"><h2><span class="n">2</span>Gráfico diário, poucas decisões</h2>
+    <p>Eu decido olhando o <b>gráfico diário</b>, com calma, fora do horário de pico. Uma operação pode ficar aberta por dias ou semanas. Menos operações, menos impulso.</p></div>
+
+  <div class="card"><h2><span class="n">3</span>Lote pequeno é a minha gestão de risco</h2>
+    <p>Uso <b>0,01 lote para cada US$ 1.000</b> de saldo. Parece pouco, e é de propósito: posição pequena aguenta o mercado andar contra sem me obrigar a sair no pior momento.</p></div>
+
+  <div class="card"><h2><span class="n">4</span>Preço médio, com tamanho controlado</h2>
+    <p>Quando o preço vai contra, eu posso fazer <b>preço médio</b>. Isso só funciona porque cada entrada é pequena. Com lote grande, preço médio quebra conta. Por isso a regra 3 vem antes.</p></div>
+
+  <div class="card"><h2><span class="n">5</span>Sem custo para ficar posicionado</h2>
+    <p>No swing, a operação dorme aberta. Uso uma conta <b>sem swap de permanência</b>, então manter a posição por dias não come o resultado.</p></div>
+
+  <div class="card"><h2><span class="n">6</span>Tudo à mostra</h2>
+    <p>Não mostro só print de lucro. A minha <b>conta real verificada</b> fica pública, com ganhos, perdas e o pior rebaixamento, atualizada sozinha.</p></div>
+
+  <a class="botao" href="./">Ver a minha conta real ao vivo</a>
+
+  <div class="card"><h2>Copy trade: em breve</h2>
+    <p>Tudo o que eu fizer na minha conta vai ser replicado na sua, <b>ganhos e perdas</b>. Para entrar na lista de espera, responda <b>QUERO</b> no meu direct.</p></div>
+
+  <div class="card risco"><h2>Leia antes</h2>
+    <p>Forex é operação alavancada e de alto risco. Você pode perder todo o dinheiro depositado. Preço médio e operar sem stop aumentam o risco de perdas grandes numa tendência longa contra. Resultado passado não garante resultado futuro. Isto não é recomendação de investimento.</p></div>
+
+  <p class="rodape">@legatusgroupfx · Instagram</p>
+</main>
+</body>
+</html>
