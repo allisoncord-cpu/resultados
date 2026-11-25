@@ -151,10 +151,10 @@ footer{text-align:center;color:var(--ink2);font-size:12px;padding:28px 0 40px}
 <section>
   <div class="wrap">
     <div class="rot">Simulação</div>
-    <h2>Começando com <em>R$ 1.500</em>, onde você poderia chegar</h2>
+    <h2>Começando com <em>R$ 1.500</em> e guardando um pouco por mês, onde você poderia chegar</h2>
     <p class="lead">Com a média dos 22 meses de validação da estratégia, já descontada a comissão de 30% sobre o lucro: 3,99% ao mês.</p>
     <div class="sim">
-      <div class="abas"><button class="on" data-m="0">Só os R$ 1.500</button><button data-m="1">+ R$ 500 por mês</button></div>
+      <div class="abas"><button class="on" data-m="300">+ R$ 300 por mês</button><button data-m="500">+ R$ 500 por mês</button></div>
       <div id="barras"></div>
       <p class="nota">Simulação hipotética, com taxa fixa todo mês e sem impostos. Na vida real há meses negativos e a rentabilidade varia. Resultado passado não garante resultado futuro. Comparação com o Tesouro prefixado a 13,55% ao ano.</p>
     </div>
@@ -193,14 +193,14 @@ const fmt = v => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
 const M = 0.057 * 0.7, T = Math.pow(1.1355, 1/12) - 1;
 function calc(taxa, meses, aporte){ let s = 1500; for (let i = 0; i < meses; i++) s = s * (1 + taxa) + aporte; return s; }
 function desenhar(modo){
-  const ap = modo ? 500 : 0, anos = [1, 5, 10];
+  const ap = modo, anos = [1, 5, 10];
   const vals = anos.map(a => ({ a, v: calc(M, a*12, ap), t: calc(T, a*12, ap), inv: 1500 + ap*a*12 }));
   const max = Math.max(...vals.map(x => x.v));
   document.getElementById('barras').innerHTML = vals.map(x => `<div class="barra"><div class="top"><span>Em ${x.a} ano${x.a>1?'s':''}</span><b>${fmt(x.v)}</b></div><div class="trilho"><div class="enche" data-w="${Math.max(2, x.v/max*100)}"></div></div><div class="comp">Você colocou ${fmt(x.inv)} · No Tesouro seria ${fmt(x.t)}</div></div>`).join('');
   requestAnimationFrame(() => document.querySelectorAll('.enche').forEach(e => e.style.width = e.dataset.w + '%'));
 }
 document.querySelectorAll('.abas button').forEach(b => b.onclick = () => { document.querySelectorAll('.abas button').forEach(x => x.classList.remove('on')); b.classList.add('on'); desenhar(+b.dataset.m); });
-desenhar(0);
+desenhar(300);
 </script>
 </body>
 </html>
