@@ -46,6 +46,10 @@ td.n{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
 .btn:hover{transform:translateY(-2px)}
 .btn.prim{background:var(--verde);color:#04170b}
 .btn.sec{border:1px solid #333;color:var(--ink)}
+.zap{border-color:rgba(37,211,102,.35);background:linear-gradient(180deg,rgba(37,211,102,.08),transparent 70%),var(--card)}
+.zap h2{color:#25d366}
+.zap-txt{font-size:15px;margin:0 0 14px}
+.btn.zapbtn{background:#25d366;color:#04170b}
 .passos{margin:6px 0 14px;padding-left:20px;display:grid;gap:10px;font-size:15px;line-height:1.45;color:var(--ink)}
 .taxas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .taxas div{border:1px solid var(--line);border-radius:12px;padding:12px}
@@ -100,6 +104,9 @@ footer{text-align:center;color:var(--ink-2);font-size:12px;margin-top:22px}
     }
   }
 
+  h += `<div class="card zap"><h2>Resumo da semana no WhatsApp</h2>
+    <p class="zap-txt">Todo sábado eu mando no grupo o resumo da conta real: operações da semana, resultado do mês e do ano. Grátis, e só eu posto no grupo, sem bagunça.</p>
+    <a class="btn zapbtn" href="https://chat.whatsapp.com/IlZBVR45fd42ztf4DkR9wu" target="_blank" rel="noopener">Receber o resumo no WhatsApp</a></div>`;
   h += `<div class="card"><h2>Como copiar minhas operações</h2><ol class="passos">
     <li><b>Abra sua conta na RoboForex</b>, plataforma <b>MT4</b>:<br>a partir de US$ 300, conta <b>ECN</b>; de US$ 100 a US$ 299, conta <b>Pro Cent</b>.</li>
     <li><b>Faça o depósito</b> (mínimo de US$ 100).</li>
@@ -110,7 +117,7 @@ footer{text-align:center;color:var(--ink-2);font-size:12px;margin-top:22px}
   h += `<div class="botoes">`;
   if(link(C.myfxbook)) h += `<a class="btn sec" href="${link(C.myfxbook)}" target="_blank" rel="noopener">Ver resultado verificado no Myfxbook</a>`;
   if(link(C.contato)) h += `<a class="btn prim" href="${link(C.contato)}" target="_blank" rel="noopener">${esc(C.textoContato||"Fale comigo")}</a>`;
-  h += `<a class="btn prim" href="https://chat.whatsapp.com/IlZBVR45fd42ztf4DkR9wu" target="_blank" rel="noopener">Dúvidas sobre o copy trade? Grupo no WhatsApp</a>`;
+  h += `<a class="btn prim" href="https://chat.whatsapp.com/IlZBVR45fd42ztf4DkR9wu" target="_blank" rel="noopener">Grupo no WhatsApp: resumo semanal e dúvidas</a>`;
   h += `<a class="btn sec" href="swing.html">Por que swing trade</a>`;
   if(C.copyEmBreve) h += `<div class="embreve">Copy trade em breve: tudo o que eu fizer na minha conta será replicado na sua. Ganhos e perdas.</div>`;
   h += `</div>`;
